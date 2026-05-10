@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const heroImg = document.querySelector('.image-border');
         if (heroImg) {
-            heroImg.style.transform = `perspective(1000px) rotateY(${moveX * 10}deg) rotateX(${-moveY * 10}deg)`;
+            heroImg.style.transform = `translate(${moveX * 20}px, ${moveY * 20}px)`;
         }
         
         const spheres = document.querySelectorAll('.gradient-sphere');
