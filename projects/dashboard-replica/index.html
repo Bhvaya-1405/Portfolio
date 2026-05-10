@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperSeva Operations Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <meta name="description" content="SuperSeva Team Management Dashboard - Operations Portal">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icon"><i data-lucide="check-circle"></i></div>
+            <span class="logo-text">SuperSeva</span>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="#" class="nav-item">
+                <i data-lucide="layout-grid"></i>
+                <span>Overview</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="file-text"></i>
+                <span>Documents</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="layout"></i>
+                <span>Dashboards</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <i data-lucide="users"></i>
+                <span>Team</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="settings"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+
+        <button class="collapse-btn">
+            <i data-lucide="chevron-left"></i>
+        </button>
+
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <div class="avatar">a</div>
+                <div class="user-info">
+                    <span class="name">admin</span>
+                    <span class="role">ADMIN</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header>
+            <div class="portal-name">OPERATIONS PORTAL</div>
+            <div class="header-actions">
+                <div class="header-user">
+                    <i data-lucide="user-circle"></i>
+                    <span>Admin</span>
+                </div>
+                <i data-lucide="moon" class="header-icon"></i>
+                <i data-lucide="log-out" class="header-icon"></i>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="content-header">
+                <div class="title-section">
+                    <h1>Team Management</h1>
+                    <p>View, create, edit, and track user activity.</p>
+                </div>
+                <button class="btn-primary">
+                    <i data-lucide="user-plus"></i>
+                    Create User
+                </button>
+            </div>
+
+            <div class="controls-bar">
+                <div class="search-container">
+                    <i data-lucide="search"></i>
+                    <input type="text" placeholder="Search by name or email...">
+                </div>
+                <div class="filter-group">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Admin</button>
+                    <button class="filter-btn">User</button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NAME</th>
+                            <th>EMAIL</th>
+                            <th>PHONE</th>
+                            <th>ROLE</th>
+                            <th>DASHBOARDS</th>
+                            <th>STATUS</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="user-name">admin</td>
+                            <td class="user-email">admin@voxket.ai</td>
+                            <td></td>
+                            <td><span class="role-badge">ADMIN</span></td>
+                            <td>All</td>
+                            <td><span class="status-badge">Active</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="action-btn edit"><i data-lucide="edit-3"></i></button>
+                                    <button class="action-btn delete"><i data-lucide="trash-2"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="user-name">Chandan Mathur</td>
+                            <td class="user-email">Chandan.Mathur@ril.com</td>
+                            <td>7899409299</td>
+                            <td><span class="role-badge">USER</span></td>
+                            <td>3 assigned</td>
+                            <td><span class="status-badge">Active</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="action-btn edit"><i data-lucide="edit-3"></i></button>
+                                    <button class="action-btn delete"><i data-lucide="trash-2"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="user-name">Kumud Sharma</td>
+                            <td class="user-email">kumud@superseva.com</td>
+                            <td>9945239351</td>
+                            <td><span class="role-badge">USER</span></td>
+                            <td>2 assigned</td>
+                            <td><span class="status-badge">Active</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="action-btn edit"><i data-lucide="edit-3"></i></button>
+                                    <button class="action-btn delete"><i data-lucide="trash-2"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="user-name">Mohammed Jaffar Sadiq</td>
+                            <td class="user-email">mohammedjaffar@supersevak.com</td>
+                            <td>+91 8310615296</td>
+                            <td><span class="role-badge">ADMIN</span></td>
+                            <td>All</td>
+                            <td><span class="status-badge">Active</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="action-btn edit"><i data-lucide="edit-3"></i></button>
+                                    <button class="action-btn delete"><i data-lucide="trash-2"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="user-name">Sangita Vinaik</td>
+                            <td class="user-email">savinaik@superseva.com</td>
+                            <td>9845389916</td>
+                            <td><span class="role-badge">USER</span></td>
+                            <td>2 assigned</td>
+                            <td><span class="status-badge">Active</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="action-btn edit"><i data-lucide="edit-3"></i></button>
+                                    <button class="action-btn delete"><i data-lucide="trash-2"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="user-name">Srikant</td>
+                            <td class="user-email">srikant@superseva.com</td>
+                            <td>9900466885</td>
+                            <td><span class="role-badge">USER</span></td>
+                            <td>1 assigned</td>
+                            <td><span class="status-badge">Active</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="action-btn edit"><i data-lucide="edit-3"></i></button>
+                                    <button class="action-btn delete"><i data-lucide="trash-2"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-footer">
+                <div class="user-count">7 users</div>
+                <div class="pagination">
+                    <button class="page-nav"><i data-lucide="chevron-left"></i></button>
+                    <span>Page 1 of 2</span>
+                    <button class="page-nav"><i data-lucide="chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="page-footer">
+            <div class="copyright">© 2026 SuperSeva</div>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Support</a>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Sidebar toggle logic
+        const sidebar = document.querySelector('.sidebar');
+        const collapseBtn = document.querySelector('.collapse-btn');
+
+        collapseBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+        });
+    </script>
+</body>
+</html>
