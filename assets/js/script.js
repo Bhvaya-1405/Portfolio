@@ -69,17 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 4. REVEAL ANIMATIONS (Intersection Observer)
-    // IMPORTANT: Observing everything with the class .reveal
-    const revealElements = document.querySelectorAll('.reveal, .timeline-item, .exp-card-item, .project-card, .skill-group');
+    const revealElements = document.querySelectorAll('.reveal, .timeline-item, .exp-card-item, .project-card, .skill-group, .stat-number');
     
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
                 
-                // Special case for about section to trigger stats
-                if (entry.target.id === 'about' || entry.target.classList.contains('about-section')) {
-                    animateStats();
+                // Trigger stats counter if it's a stat number
+                if (entry.target.classList.contains('stat-number')) {
+                    animateSingleStat(entry.target);
                 }
             }
         });
@@ -90,40 +89,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 5. STATS COUNTER
-    function animateStats() {
-        const stats = document.querySelectorAll('.stat-number');
-        stats.forEach(stat => {
-            if (stat.classList.contains('animated')) return;
-            stat.classList.add('animated');
+    function animateSingleStat(stat) {
+        if (stat.classList.contains('animated')) return;
+        stat.classList.add('animated');
+        
+        const targetStr = stat.getAttribute('data-target');
+        const target = parseFloat(targetStr);
+        const isFloat = targetStr.includes('.');
+        const duration = 2000;
+        const startTime = performance.now();
+        
+        const updateCount = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easeProgress = 1 - Math.pow(1 - progress, 3);
             
-            const targetStr = stat.getAttribute('data-target');
-            const target = parseFloat(targetStr);
-            const isFloat = targetStr.includes('.');
-            let count = 0;
-            const duration = 2000;
-            const startTime = performance.now();
+            const currentCount = easeProgress * target;
             
-            const updateCount = (currentTime) => {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                const easeProgress = 1 - Math.pow(1 - progress, 3);
-                
-                count = easeProgress * target;
-                
-                if (isFloat) {
-                    stat.innerText = count.toFixed(2);
-                } else {
-                    stat.innerText = Math.ceil(count);
-                }
-                
-                if (progress < 1) {
-                    requestAnimationFrame(updateCount);
-                } else {
-                    stat.innerText = targetStr;
-                }
-            };
-            requestAnimationFrame(updateCount);
-        });
+            if (isFloat) {
+                stat.innerText = currentCount.toFixed(2);
+            } else {
+                stat.innerText = Math.ceil(currentCount);
+            }
+            
+            if (progress < 1) {
+                requestAnimationFrame(updateCount);
+            } else {
+                stat.innerText = targetStr;
+            }
+        };
+        requestAnimationFrame(updateCount);
     }
 
     // 6. PARALLAX & PARTICLES
