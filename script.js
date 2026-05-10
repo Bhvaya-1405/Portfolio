@@ -144,10 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
         const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
         
-        const heroImg = document.querySelector('.image-border');
-        if (heroImg) {
-            heroImg.style.transform = `translate(${moveX * 20}px, ${moveY * 20}px)`;
-        }
+        // Removed movable photo effect as requested
         
         const spheres = document.querySelectorAll('.gradient-sphere');
         spheres.forEach((sphere, index) => {
