@@ -518,7 +518,7 @@ a {
 */
 .reveal {
     opacity: 0;
-    transform: translateY(60px);
+    transform: translateY(100px);
     transition: var(--tr-bold);
 }
 
