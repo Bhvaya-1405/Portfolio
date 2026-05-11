@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader-content">
@@ -684,7 +685,61 @@
     </footer>
 
 
+    <!-- Certificate Viewer Modal -->
+    <div id="cert-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close modal">
+                <i data-lucide="x"></i>
+            </button>
+            
+            <div class="modal-content">
+                <div class="cert-viewer">
+                    <div id="cert-display">
+                        <!-- Image or PDF will be injected here -->
+                        <img id="modal-cert-img" src="" alt="Certificate Preview">
+                        <iframe id="modal-cert-pdf" src="" frameborder="0" style="display:none;"></iframe>
+                    </div>
+                    
+                    <div class="cert-nav">
+                        <button class="cert-nav-btn" id="modal-prev" aria-label="Previous">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <button class="cert-nav-btn" id="modal-next" aria-label="Next">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="cert-details">
+                    <h3 id="modal-cert-title">Certificate Title</h3>
+                    <p class="issuer" id="modal-cert-issuer">Issuer Name</p>
+                    
+                    <div class="cert-meta">
+                        <span><i data-lucide="calendar"></i> <span id="modal-cert-date">Date</span></span>
+                    </div>
+                    
+                    <p id="modal-cert-desc">Detailed description of the certification and its impact.</p>
+                    
+                    <div class="skills-gained">
+                        <h4>Skills Gained</h4>
+                        <div class="skill-tags" id="modal-cert-skills">
+                            <!-- Skills will be injected here -->
+                        </div>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <a id="modal-download" href="#" class="btn btn-primary" download>
+                            <i data-lucide="download"></i> Download Certificate
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <button id="back-to-top"><i data-lucide="arrow-up"></i></button>
+
 
     <script src="assets/js/script.js"></script>
     <script>lucide.createIcons();</script>
