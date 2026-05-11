@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Details | Bhavya Singh</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/certificate.css">
+</head>
+<body class="details-page">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <span class="loader-text">Bhavya Singh</span>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+
+    <main>
+        <section class="cert-details-section">
+            <div class="container">
+                <div class="back-nav">
+                    <a href="index.html#certificates" class="btn-back">
+                        <i data-lucide="arrow-left"></i> Back to Portfolio
+                    </a>
+                </div>
+
+                <div class="cert-details-grid">
+                    <div class="cert-visual reveal">
+                        <div class="cert-image-container">
+                            <div id="cert-viewer-content">
+                                <!-- Dynamic content: img or iframe -->
+                                <div class="loader-circle"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cert-info-content reveal">
+                        <div class="glass-container">
+                            <h1 id="cert-title" class="text-gradient">Certificate Title</h1>
+                            <p id="cert-issuer" class="issuer-text">Organization Name</p>
+                            
+                            <div class="cert-meta-item">
+                                <i data-lucide="calendar"></i>
+                                <span id="cert-date">Issue Date</span>
+                            </div>
+
+                            <div class="cert-description">
+                                <h3>Description</h3>
+                                <p id="cert-desc">Detailed description of the certificate and achievements.</p>
+                            </div>
+
+                            <div class="cert-skills">
+                                <h3>Skills Gained</h3>
+                                <div id="cert-skills-tags" class="skill-tags">
+                                    <!-- Dynamic tags -->
+                                </div>
+                            </div>
+
+                            <div class="cert-actions">
+                                <a id="cert-download" href="#" class="btn btn-primary" download>
+                                    <i data-lucide="download"></i> Download Certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">&copy; 2026 Bhavya Singh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/certificate-data.js"></script>
+    <script src="assets/js/certificate-page.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Custom Cursor Logic for details page
+        const cursor = document.getElementById('cursor');
+        const cursorBlur = document.getElementById('cursor-blur');
+        document.addEventListener('mousemove', (e) => {
+            if (cursor) {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            }
+            if (cursorBlur) {
+                cursorBlur.style.left = e.clientX - 25 + 'px';
+                cursorBlur.style.top = e.clientY - 25 + 'px';
+            }
+        });
+    </script>
+</body>
+</html>
