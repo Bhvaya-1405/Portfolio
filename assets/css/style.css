@@ -670,6 +670,54 @@ a {
     margin-top: 5px;
 }
 
+.exp-card-image {
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 15px 0;
+    position: relative;
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+}
+
+.exp-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--tr-smooth);
+}
+
+.exp-card-image a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(139, 92, 246, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    transition: var(--tr-smooth);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.exp-card-image:hover img {
+    transform: scale(1.1);
+}
+
+.exp-card-image:hover .image-overlay {
+    opacity: 1;
+}
+
 .exp-card-footer {
     margin-top: 20px;
     padding-top: 15px;
