@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
             date: '2024',
             desc: 'Comprehensive training on essential data science tools including Jupyter Notebooks, Zeppelin Notebooks, RStudio, and GitHub.',
             skills: ['Jupyter', 'GitHub', 'RStudio', 'Cloud IDEs'],
-            image: 'certificates/images/tools for cdata science.png',
-            file: 'certificates/images/tools for cdata science.png'
+            image: 'certificates/images/tools-for-data-science.png',
+            file: 'certificates/images/tools-for-data-science.png'
         },
         'ibm-analysis': {
             title: 'IBM Data Analysis with Python',
@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
             date: '2024',
             desc: 'Technical specialization in using Python for data analysis, focusing on libraries like Pandas, NumPy, and Scipy for real-world datasets.',
             skills: ['Pandas', 'NumPy', 'Matplotlib', 'Exploratory Data Analysis'],
-            image: 'certificates/images/data analysis with python.png',
-            file: 'certificates/images/data analysis with python.png'
+            image: 'certificates/images/data-analysis-with-python.png',
+            file: 'certificates/images/data-analysis-with-python.png'
         },
         'ibm-whatis': {
             title: 'IBM What is Data Science',
@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
             date: '2024',
             desc: 'Foundational certification exploring the definition, applications, and impact of data science in the modern tech landscape.',
             skills: ['Data Literacy', 'Research Methods', 'Industry Insights'],
-            image: 'certificates/images/what is data science.png',
-            file: 'certificates/images/what is data science.png'
+            image: 'certificates/images/what-is-data-science.png',
+            file: 'certificates/images/what-is-data-science.png'
         },
         'geekster': {
             title: 'Geekster Google Sheets Certificate',
