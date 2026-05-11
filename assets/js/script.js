@@ -7,17 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
             date: 'June 2025',
             desc: 'Successfully completed a Data Analysis internship focused on patient data insights, doctor performance evaluation, and market competitive analysis.',
             skills: ['Data Analysis', 'Excel', 'Healthcare Analytics', 'Statistical Reporting'],
-            file: 'certificates/pdfs/child-nest.pdf',
-            type: 'pdf'
-        },
-        'suretrust': {
-            title: 'SureTrust Data Science Certification',
-            issuer: 'SURE Trust',
-            date: 'Jan 2026',
-            desc: 'In-depth certification covering the end-to-end data science lifecycle, from data cleaning and preprocessing to advanced machine learning models.',
-            skills: ['Python', 'SQL', 'Machine Learning', 'Data Preprocessing'],
-            file: 'certificates/pdfs/suretrust.pdf',
-            type: 'pdf'
+            file: 'certificates/images/child-nest.png',
+            type: 'image'
         },
         'tantrafiesta': {
             title: 'TantraFiesta’25 Participation Certificate',
