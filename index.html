@@ -673,7 +673,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">BS<span>.</span></div>
+                <div class="footer-logo" id="admin-trigger" style="cursor: default; position: relative; z-index: 100;">BS<span>.</span></div>
                 <div class="footer-socials">
                     <a href="https://github.com/Bhavya-1405"><i data-lucide="github"></i></a>
                     <a href="https://linkedin.com/in/bhavyasingh4"><i data-lucide="linkedin"></i></a>
@@ -683,50 +683,6 @@
         </div>
     </footer>
 
-    <!-- Certificate Viewer Modal -->
-    <div id="cert-modal" class="modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-container">
-            <button class="modal-close" aria-label="Close modal">
-                <i data-lucide="x"></i>
-            </button>
-            <div class="modal-content">
-                <div class="cert-viewer">
-                    <div id="cert-display">
-                        <!-- Dynamic content: img or iframe -->
-                        <div class="loader-circle"></div>
-                    </div>
-                    <div class="cert-nav">
-                        <button class="cert-nav-btn prev" aria-label="Previous certificate">
-                            <i data-lucide="chevron-left"></i>
-                        </button>
-                        <button class="cert-nav-btn next" aria-label="Next certificate">
-                            <i data-lucide="chevron-right"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="cert-details">
-                    <h3 id="modal-cert-title">Certificate Title</h3>
-                    <p id="modal-cert-issuer" class="issuer">Organization Name</p>
-                    <div class="cert-meta">
-                        <span id="modal-cert-date"><i data-lucide="calendar"></i> Date</span>
-                    </div>
-                    <p id="modal-cert-desc">Detailed description of the certificate and what was achieved.</p>
-                    <div class="skills-gained">
-                        <h4>Skills Gained:</h4>
-                        <div id="modal-cert-skills" class="skill-tags">
-                            <!-- Dynamic skills -->
-                        </div>
-                    </div>
-                    <div class="modal-actions">
-                        <a id="modal-cert-download" href="#" class="btn btn-primary" download>
-                            <i data-lucide="download"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <button id="back-to-top"><i data-lucide="arrow-up"></i></button>
 
